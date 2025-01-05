@@ -1,5 +1,6 @@
 import {
   ActivityIndicator,
+  Button,
   FlatList,
   Image,
   Text,
@@ -19,6 +20,7 @@ import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import Filters from "@/components/Filters";
 import { Card, FeaturedCard } from "@/components/Cards";
 import NoResults from "@/components/NoResults";
+import seed from "@/lib/seed";
 
 const Home = () => {
   const { user } = useGlobalContext();
@@ -56,6 +58,7 @@ const Home = () => {
 
   return (
     <SafeAreaView className="h-full bg-white">
+      {/* <Button title="Seed" onPress={seed}/> */}
       <FlatList
         data={properties}
         numColumns={2}
